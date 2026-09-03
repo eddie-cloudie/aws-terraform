@@ -1,22 +1,22 @@
 # Create iam user in AWS CLI
 
 - `aws configure`
-`AWS Access Key ID [****************HTHS]: AKIA3PQL***********`
-`AWS Secret Access Key [****************Y2bu]: oVjvG**********`
-`Default region name [ap-southeast-2]: ap-southeast-4`
-`Default output format [json]: json`
+- `AWS Access Key ID [****************HTHS]: AKIA3PQL***********`
+- `AWS Secret Access Key [****************Y2bu]: oVjvG**********`
+- `Default region name [ap-southeast-2]: ap-southeast-4`
+- `Default output format [json]: json`
 
 ## verify aws credentials
 
 - `cat ~/.aws/credentials`
-`[default]`
-`aws_access_key_id = AKIA3PQL***********`
-`aws_secret_access_key = oVjvG**********`
+- `[default]`
+- `aws_access_key_id = AKIA3PQL***********`
+- `aws_secret_access_key = oVjvG**********`
 
 ## verify iam user
 
 - `aws iam get-user`
-`{
+- `{
     "User": {
         "UserName": "eddie-c",
         "UserId": "789*********",
@@ -28,7 +28,7 @@
 
 ## create iam user 
 - `aws iam create-user --user-name dev_terraform`
-`{
+- `{
     "User": {
         "Path": "/",
         "UserName": "dev_terraform",
@@ -43,7 +43,7 @@
 
 ## verify policy
 - `aws iam list-attached-user-policies --user-name dev_terraform`
-`{
+- `{
     "AttachedPolicies": [
         {
             "PolicyName": "PowerUserAccess",
